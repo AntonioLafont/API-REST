@@ -14,7 +14,10 @@ public class ControladorCarrito {
     @ResponseStatus(HttpStatus.CREATED)
 
     public ModeloCarrito crea(@RequestBody ModeloCarrito carritoNuevo) {
-
+        if (carritos.containsKey(carritoNuevo.idCarrito())) {
+            throw new ResponseStatusException(HttpStatus.CONFLICT,
+                    "El carrito ya existe");
+        }
         carritos.put(carritoNuevo.idCarrito(), carritoNuevo);
         return carritoNuevo;
     }
@@ -57,3 +60,4 @@ public class ControladorCarrito {
         return;
     }
 }
+
