@@ -1,7 +1,6 @@
 # API-REST
-práctica 2 PAT
 
-| Método HTTP | Ruta                | Cuerpo (Request Body) | Descripción                                  | Respuestas posibles |
+| Método HTTP | Ruta                | Cuerpo                | Descripción                                  | Respuestas posibles |
 | ----------- | ------------------- | --------------------- | -------------------------------------------- | ------------------- |
 | POST        | `/api/carrito`      | Carrito (JSON)        | Crea un nuevo carrito                        | 201, 409            |
 | GET         | `/api/carrito/{id}` | —                     | Obtiene un carrito por su identificador      | 200, 404            |
